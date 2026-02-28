@@ -130,7 +130,7 @@ tests = [
     {"label": f"DEF +{int(inc_def)}", "params": {**base_params, "def_": in_def + inc_def}},
     {"label": f"SDR +{int(inc_sdr)}", "params": {**base_params, "sdr": in_sdr + inc_sdr}},
     {"label": f"END +{int(inc_end)}", "params": {**base_params, "end": in_end + inc_end}},
-    {"label": f"EVA +{int(inc_eva)}", "params": {**base_params, "heavy_ch_eva": in_heavy_eva + inc_eva}},
+    {"label": f"HVY EVA +{int(inc_eva)}", "params": {**base_params, "heavy_ch_eva": in_heavy_eva + inc_eva}},
     {"label": f"SBK +{inc_sbk:.2f}", "params": {**base_params, "shield_bk_ch": in_sbk_ch + inc_sbk}},
 ]
 
@@ -178,4 +178,5 @@ elif target_label == "Shield Block Chance": fig.add_vline(x=in_sbk_pen + 1.0, li
 elif target_label == "Heavy EVA": fig.add_vline(x=in_heavy_ch, line_dash="dash", line_color="orange", annotation_text="Heavy Immunity")
 
 st.plotly_chart(fig, use_container_width=True)
+
 
