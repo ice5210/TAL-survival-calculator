@@ -95,7 +95,7 @@ with st.sidebar:
     in_sbk_red = st.number_input("Shield Reduction", value=0.425)
 
     st.header("👹 Enemy Stats")
-    in_crit_ch = st.number_input("Enemy Crit Stat", value=3500.0)
+    in_crit_ch = st.number_input("Enemy Crit Stat", value=3200.0)
     in_multi = st.number_input("Crit Multiplier", value=2.5)
     in_crit_dmg_extra = st.number_input("Enemy Extra Crit DMG", value=0.6)
     in_heavy_ch = st.number_input("Enemy Heavy (HAC)", value=2500.0)
@@ -178,3 +178,4 @@ elif target_label == "Shield Block Chance": fig.add_vline(x=in_sbk_pen + 1.0, li
 elif target_label == "Heavy EVA": fig.add_vline(x=in_heavy_ch, line_dash="dash", line_color="orange", annotation_text="Heavy Immunity")
 
 st.plotly_chart(fig, use_container_width=True)
+
