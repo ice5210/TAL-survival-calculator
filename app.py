@@ -84,14 +84,14 @@ st.title("TAL survival calculator")
 
 with st.sidebar:
     st.header("👤 Your Stats")
-    in_hp = st.number_input("Max HP", value=31742.0)
-    in_def = st.number_input("Defense", value=3600.0)
-    in_sdr = st.number_input("SDR", value=1108.0)
-    in_end = st.number_input("Endurance", value=3438.0)
-    in_crit_res = st.number_input("Crit DMG Res", value=0.453)
-    in_heavy_eva = st.number_input("Heavy EVA", value=893.0)
+    in_hp = st.number_input("Max HP", value=31458.0)
+    in_def = st.number_input("Defense", value=3565.0)
+    in_sdr = st.number_input("SDR", value=1233.0)
+    in_end = st.number_input("Endurance", value=4182.0)
+    in_crit_res = st.number_input("Crit DMG Res", value=0.398)
+    in_heavy_eva = st.number_input("Heavy EVA", value=733.0)
     in_heavy_res = st.number_input("Heavy DMG Res", value=0.0)
-    in_sbk_ch = st.number_input("Shield Block Chance", value=1.198, format="%.3f")
+    in_sbk_ch = st.number_input("Shield Block Chance", value=0.868, format="%.3f")
     in_sbk_red = st.number_input("Shield Reduction", value=0.425)
 
     st.header("👹 Enemy Stats")
@@ -178,5 +178,6 @@ elif target_label == "Shield Block Chance": fig.add_vline(x=in_sbk_pen + 1.0, li
 elif target_label == "Heavy EVA": fig.add_vline(x=in_heavy_ch, line_dash="dash", line_color="orange", annotation_text="Heavy Immunity")
 
 st.plotly_chart(fig, use_container_width=True)
+
 
 
